@@ -1,5 +1,7 @@
 from coincident import *
 
+# Hi from Bert!
+
 def main():
     a=[]
     b=[]

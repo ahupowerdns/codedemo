@@ -13,7 +13,7 @@ def findCoincidentDiff(a, b, diff):
     """Find elements in a and b that differ at most diff at the same position"""
     ret=[]
     for x in xrange(0, min(len(a), len(b))):
-        if(a[x] - b[x] < diff):
+        if(abs(a[x] - b[x]) < diff):
             ret.append(x)
 
     return ret
@@ -41,6 +41,11 @@ class TestCoincident(unittest.TestCase):
     def test_diff(self):
         res = findCoincidentDiff([9,9,9], [0,1,10], 1)
         self.assertTrue(res==[2])
+
+    def test_diff2(self):
+        res = findCoincidentDiff([9,9,10], [0,1,9], 1)
+        self.assertTrue(res==[2])
+
 
     def test_diffLength(self):
         res = findCoincident([1,2], [1,2,3,4])
