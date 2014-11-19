@@ -10,7 +10,7 @@ def main():
     for x in matches:
         print "Concidence at %s: %s == %s" % (x, a[x], b[x])
 
-
+        print "maja here"
 # Standard boilerplate to call the main() function to begin
 # the program.
 if __name__ == '__main__':
